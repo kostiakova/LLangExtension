@@ -1,0 +1,31 @@
+{
+  "name": "lama-ext",
+  "displayName": "Lama Ext",
+  "description": "Main official extension for Lama Lang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lamlang",
+      "aliases": ["Lama Language", "lamlang"],
+      "extensions": [".lam", ".llam"],
+      "configuration": "./language-configuration.json"
+    }],
+    "snippets": [
+      {
+        "language": "lamlang",
+        "path": "./snippets/yourSnippets.json"
+      }
+    ],
+    "grammars": [{
+      "language": "lamlang",
+      "scopeName": "main.lam",
+      "path": "./syntaxes/lamlang.tmLanguage.json"
+    }]
+  }
+}
