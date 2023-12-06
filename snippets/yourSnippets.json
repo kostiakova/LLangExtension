@@ -1,0 +1,144 @@
+{
+    "Print Statement": {
+      "prefix": "print",
+      "body": [
+        "print($1);",
+        "$2"
+      ],
+      "description": "Print function"
+    },
+    "For Loop": {
+      "prefix": "for",
+      "body": [
+        "for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+        "\t$3",
+        "}"
+      ],
+      "description": "Creates a for loop"
+    },
+    "IF Statement": {
+      "prefix": "if(){}",
+      "body": [
+        "if(true$1){",
+        "\t$2",
+        "}"
+      ],
+      "description": "Auto IF statement"
+    },
+    "uint8":{"prefix":"uint8","body":["uint8 $1 = $2;"]},
+    "uint16":{"prefix":"uint16","body":["uint16 $1 = $2;"]},
+    "uint32":{"prefix":"uint32","body":["uint32 $1 = $2;"]},
+    "uint64":{"prefix":"uint64","body":["uint64 $1 = $2;"]},
+    "uint128":{"prefix":"uint128","body":["uint128 $1 = $2;"]},
+    "int8":{"prefix":"int8","body":["int8 $1 = $2;"]},
+    "int16":{"prefix":"int16","body":["int16 $1 = $2;"]},
+    "int32":{"prefix":"int32","body":["int32 $1 = $2;"]},
+    "int64":{"prefix":"int64","body":["int64 $1 = $2;"]},
+    "func":{"prefix":"func","body":["func"]},
+    "proc":{"prefix":"proc","body":["proc"]},
+    "struct":{"prefix":"struct","body":["struct"]},
+    "class":{"prefix":"class","body":["class"]},
+    "enum":{"prefix":"enum","body":["enum"]},
+    "extern":{"prefix":"extern","body":["extern"]},
+    "inline":{"prefix":"inline","body":["inline"]},
+    "call16":{"prefix":"call16","body":["call16"]},
+    "call32":{"prefix":"call32","body":["call32"]},
+    "call64":{"prefix":"call64","body":["call64"]},
+    "sizeof":{"prefix":"sizeof","body":["sizeof($1)"]},
+    "noreturn":{"prefix":"noreturn","body":["noreturn"]},
+    "__naked__":{"prefix":"__naked__","body":["__naked__"]},
+    "private":{"prefix":"private","body":["private"]},
+    "public":{"prefix":"public","body":["public"]},
+    "protected":{"prefix":"protected","body":["protected"]},
+    "string": {
+      "prefix": "string",
+      "body": [
+        "string $1 = $2;"
+      ],
+      "description": "Data type: string"
+    },
+    "int128": {
+      "prefix": "int128",
+      "body": [
+        "int128 $1 = $2;"
+      ],
+      "description": "Data type: int128"
+    },
+    "string16": {
+      "prefix": "string16",
+      "body": [
+        "string16 $1 = $2;"
+      ],
+      "description": "Data type: string16"
+    },
+    "vector": {
+      "prefix": "vector",
+      "body": [
+        "vector $1 = $2;"
+      ],
+      "description": "Data type: vector"
+    },
+    "stack": {
+      "prefix": "stack",
+      "body": [
+        "stack $1 = $2;"
+      ],
+      "description": "Data type: stack"
+    },
+    "map": {
+      "prefix": "map",
+      "body": [
+        "map $1 = $2;"
+      ],
+      "description": "Data type: map"
+    },
+    "void": {
+      "prefix": "void",
+      "body": [
+        "void $1 = $2;"
+      ],
+      "description": "Data type: void"
+    },
+    "char": {
+      "prefix": "char",
+      "body": [
+        "char $1 = $2;"
+      ],
+      "description": "Data type: char"
+    },
+    "char16": {
+      "prefix": "char16",
+      "body": [
+        "char16 $1 = $2;"
+      ],
+      "description": "Data type: char16"
+    },
+    "byte": {
+      "prefix": "byte",
+      "body": [
+        "byte $1 = $2;"
+      ],
+      "description": "Data type: byte"
+    },
+    "short": {
+      "prefix": "short",
+      "body": [
+        "short $1 = $2;"
+      ],
+      "description": "Data type: short"
+    },
+    "int": {
+      "prefix": "int",
+      "body": [
+        "int $1 = $2;"
+      ],
+      "description": "Data type: int"
+    },
+    "long": {
+      "prefix": "long",
+      "body": [
+        "long $1 = $2;"
+      ],
+      "description": "Data type: long"
+    }
+  }
