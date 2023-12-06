@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Lama Language",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#structs"},
+		{"include": "#visibility-area"},
+		{"include": "#access-modifiers"},
+		{"include": "#data-types"},
+		{"include": "#spec-types"},
+		{"include": "#functions"},
+		{"include": "#func-name"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.lamlang",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "keyword.control.lamlang",
+				"match": "\\b(print|sizeof)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.lamlang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lamlang",
+					"match": "\\\\."
+				}
+			]
+		},
+		"structs": {
+			"patterns": [{
+				"name": "keyword.other",
+				"match": "\\b(func|proc|struct|class|enum)\\b"
+			}]
+		},
+		"visibility-area":{
+			"patterns": [{
+				"name": "storage.modifier",
+				"match": "\\b(extern|inline|call15|call32|call64|noreturn|__naked__)\\b"
+			}]
+		},
+		"access-modifiers":{
+			"patterns": [{
+				"name": "storage.modifier",
+				"match": "\\b(private|public|protected)\\b"
+			}]
+		},
+		"data-types": {
+			"patterns": [{
+				"name": "variable",
+				"match": "\\b(int|string|float|long long|double|bool|uint8|char|uint64|int8|int16|int32|int64|short|byte|uint128|long|string16|vector|stack|map|void)\\b"
+			}]
+		},
+		"spec-types":{
+			"patterns": [{
+				"name": "storage.modifier",
+				"match": "\\b(__attribute__|__unq_ptr__|__proc|__func|__struct|__class|__dll_lib_win)\\b"
+			}]
+		},
+		"func-name":{
+		"patterns": [{
+			"name": "entity.name.function",
+			  "match": "\\b(func|proc|struct|class|enum)\\s+([a-zA-Z_]+[a-zA-Z0-9_]*)\\b"
+		  }]
+		},
+		"numericians":{"patterns": [
+			{
+				"match": "\\b[0-9]+\\b",
+				"name": "constant.numeric.myLanguage"
+			}
+		]}
+	},
+	"scopeName": "main.lam"
+}
